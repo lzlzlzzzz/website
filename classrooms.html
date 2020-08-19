@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WGHS Top 5s Classrooms</title>
+        <meta name="description" content="This is the Classroom Page of WGHS Top 5s.">
+        <meta name="keywords" content="classrooms, hardest-to-find, popular">
+        <meta name="author" content="Lillian Zhao">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div id="header"></div>
+        
+        <section class="headerBox" id="classroomsHeader">
+            <h1>Westlake Classroom Top 5s</h1>
+            <h3>Can you find them?</h3>
+        </section>
+        
+        <div class="align">
+            <h2>Top 5 Hardest-To-Find Classrooms</h2>
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <div class="numberText">1 / 5</div>
+                    <video src="videos/a32.mp4" controls></video>
+                    <div class="captionText">Caption Text</div>
+                </div>
+
+                <div class="mySlides1">
+                    <div class="numberText">2 / 5</div>
+                    <video src="email5.mp4" controls="true"></video>
+                    <div class="captionText">Caption Text</div>
+                </div>
+                
+                <div class="mySlides1">
+                    <div class="numberText">3 / 5</div>
+                    <video src="email5.mp4" controls="true"></video>
+                    <div class="captionText">Caption Text</div>
+                </div>
+                
+                <div class="mySlides1">
+                    <div class="numberText">4 / 5</div>
+                    <video src="email5.mp4" controls="true"></video>
+                    <div class="captionText">Caption Text</div>
+                </div>
+                
+                <div class="mySlides1">
+                    <div class="numberText">5 / 5</div>
+                    <video src="email5.mp4" controls="true"></video>
+                    <div class="captionText">Caption Text</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+            
+            <hr>
+            
+            <div class="align">
+                <h2>Top 5 Most Popular Classrooms</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides2">
+                        <div class="numberText">1 / 5</div>
+                        <video src="email5.mp4" controls="true"></video>
+                        <div class="captionText">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numberText">2 / 5</div>
+                        <video src="email5.mp4" controls="true"></video>
+                        <div class="captionText">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides2">
+                        <div class="numberText">3 / 5</div>
+                        <video src="email5.mp4" controls="true"></video>
+                        <div class="captionText">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides2">
+                        <div class="numberText">4 / 5</div>
+                        <video src="email5.mp4" controls="true"></video>
+                        <div class="captionText">Caption Text</div>
+                    </div>
+                
+                    <div class="mySlides2">
+                        <div class="numberText">5 / 5</div>
+                        <video src="email5.mp4" controls="true"></video>
+                        <div class="captionText">Caption Text</div>
+                    </div>
+                
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="footer"></div>
+        
+        
+        
+        <!-- jQuery for shared header & footer -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        
+        <script>
+            // Make the header and footer files to be included in multiple html pages
+            $(function() {
+                $("#header").load("header.html"); 
+                $("#footer").load("footer.html");
+            });
+            
+            // Slideshow effects
+            var slideIndex = [1,1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+            
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+            
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}
+                if (n < 1) {slideIndex[no] = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no]-1].style.display = "block"; 
+            }
+        </script>
+        
+    </body>
+</html>

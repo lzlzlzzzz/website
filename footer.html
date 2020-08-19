@@ -1,0 +1,61 @@
+<button onclick="topFunction()" id="topBtn" title="Go to top"><i class="upArrow"></i></button>
+
+<footer>
+    <div class="row">
+        <div class="column footer-column">
+            <h3 class="logo">WGHS <span>Top 5s</span></h3>
+            <p class="footer-bio">
+                Designed for new year 9s. Explore Westlake Girls High School with WGHS Top 5s.
+            </p>
+            <p class="footer-copyright">Copyright &copy; 2020 WGHS Top 5s</p>
+        </div>
+        <div class="column footer-column">
+            <ul class="footer-links">
+                <li><p class="footer-heading">Discovery</p></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="classrooms.html">Classrooms</a></li>
+                <li><a href="printing_main.html">Technology Issues</a></li>
+                <li><a href="schoolTips.html">School Tips</a></li>
+            </ul>
+        </div>
+        <div class="column footer-column">
+            <ul class="footer-links">
+                <li><p class="footer-heading">School Contact</p></li>
+                <li><a href="https://goo.gl/maps/u8G46ftBKBhqjrjj8" target="_blank">Wairau Road, Takapuna</a></li>
+                <li><p>(09) 489-4169</p></li>
+                <li><a href="mailto:office@westlakegirls.school.nz">office@westlakegirls.school.nz</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>	
+
+
+<!-- jQuery for highlighting the current page in the topnav -->
+<script src="JavaScript/jquery-1.10.2.js" type="text/javascript"></script>
+<script>
+    // Highlight the current page in the footer
+    $(function() {
+        var url = window.location.href;
+        $(".footer-links a").each(function() {
+             if (url == (this.href)) {
+                $(this).closest("a").addClass("active");
+                $(this).closest("a").parent().parent().addClass("active");
+            }
+        });
+    }); 
+    
+    // When the user scrolls down 200px from the top of the document, show the button. When the user clicks on the button, scroll to the top of the document
+    mybutton = document.getElementById("topBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>

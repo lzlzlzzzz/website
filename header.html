@@ -1,0 +1,95 @@
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab&family=Secular+One&family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header>
+    <div class="topnav">
+        <h3><a href="index.html" class="logo">WGHS <span>Top 5s</span></a></h3>
+        <div class="topnav-right">
+            <a href="index.html">Home</a>
+            <a href="classrooms.html">Classrooms</a>
+            <div class="dropDown">
+                <button class="dropBtn" onclick="myFunction()">Technology Issues
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="printing_main.html">Top 5 Printing Issues</a>
+                    <a href="wifiPassword_main.html">Top 5 WiFi & Password Issues</a>
+                </div>
+            </div>
+            <a href="schoolTips.html">School Tips</a>
+        </div>
+        <span class="icon" onclick="openNav()">&#9776;</span>
+    </div>
+    
+    <div id="myTopnav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="classrooms.html">Classrooms</a>
+            <button class="dropdown-btn">Technology Issues
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="printing_main.html">Top 5 Printing Issues</a>
+                <a href="wifiPassword_main.html">Top 5 WiFi & Password Issues</a>
+            </div>
+            <a href="schoolTips.html">School Tips</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- jQuery for highlighting the current page in the topnav -->
+<script src="JavaScript/jquery-1.10.2.js" type="text/javascript"></script>
+
+<script>
+    /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropBtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+    
+    // Open and close functions for the dropdown menu in the topnav
+    function openNav() {
+        document.getElementById("myTopnav").style.height = "100%";
+    }
+    function closeNav() {
+        document.getElementById("myTopnav").style.height = "0%";
+    }
+    
+    // Outline the current page in the topnav
+    $(function() {
+        var url = window.location.href;
+        $(".topnav-right a").each(function() {
+             if (url == (this.href)) {
+                $(this).closest("a").addClass("active");
+                $(this).closest("a").parent().parent().addClass("active");
+            }
+        });
+    }); 
+</script>

@@ -1,0 +1,735 @@
+html {
+    background: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+body { 
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font: bold 45px 'Roboto Slab', serif;
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: black;
+    font: bold 25px 'Ubuntu', sans-serif;
+}
+
+section h3 {
+    font: bold 20px 'Ubuntu', sans-serif;
+    color: white;
+    text-shadow: 0 0 30px rgb(0, 0, 0);
+    letter-spacing: 2px;
+}
+
+p, table, .numberText, .captionText {
+    font: normal 17px 'Ubuntu', sans-serif;
+    color: #000000;
+}
+
+.align {
+    padding: 0.5% 5% 3% 5%;
+}
+
+* {box-sizing: border-box;}
+
+/* Style the logo */
+.logo {
+    color: white;
+	font: normal 36px 'Secular One', sans-serif;
+}
+
+.logo span {
+    color:  white;
+}
+
+/* Style the top nagivation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #162A30;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    padding: 20px 15px;
+    z-index: 1;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    padding: 13px 12px;
+    text-decoration: none;
+    line-height: 25px;
+}
+
+/* Style the logo inside the topnav */
+.topnav h3 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Float the links to the right */
+.topnav-right {
+    float: right;
+}
+
+.topnav-right a, .dropDown .dropBtn {
+    color: white;
+    font: normal 18px 'Open Sans', sans-serif;
+    padding: 13px 12px;
+}
+
+/* Change the background color on mouse-over */
+.topnav a:hover, .dropDown:hover .dropBtn, .dropBtn:focus {
+    background-color: #ddd;
+    color: black;
+    border-radius: 4px;
+}
+
+/* Style the dropdown menus in the topnav */
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.dropDown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropDown .dropBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.show {
+  display: block;
+}
+
+/* Style the dropdown menu on mobile phones */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a, .dropdown-btn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 160px;
+}
+
+.dropdown-btn {
+  font-size: 28px;
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Style the headers on each page */
+.headerBox {
+    background: no-repeat;
+    background-size: 100% auto;
+    margin: 0;
+    padding: 10% 3%;
+    width: 100%;
+    text-align: center;
+}
+
+#homeHeader {
+    background-image: url(images/homeHeader.jpg);
+    background-position: center;
+}
+
+#classroomsHeader {
+    background-image: url(images/classroomsHeader_2.jpg);
+    background-position: center;
+}
+
+#technologyHeader {
+    background-image: url(images/technologyIssuesHeader_2.jpg);
+    background-position: top;
+}
+
+#schoolTipsHeader {
+    background-image: url(images/schoolTipsHeader_2.jpg);
+    background-position: center;
+}
+
+/* Style the back-to-top button */
+#topBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    border: none; 
+    outline: none;
+    background-color: #A0C7F9;
+    opacity: 0.5;
+    cursor: pointer; 
+    padding: 25px 25px 18px 25px; 
+    border-radius: 100%; 
+}
+
+.upArrow {
+    border: solid #000000;
+    border-width: 0 5px 5px 0;
+    display: block;
+    padding: 10px;
+    opacity: 0.5;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+#topBtn:hover {
+    opacity: 1;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active, .footer-links a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Style the Google map and the school introduction on the Homepage */
+article {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    column-count: 2;
+    text-align: left;
+    padding: 3% 0 3% 5%;
+}
+
+.map-responsive{
+    overflow: hidden;
+    padding: 50%;
+    position: relative;
+}
+
+.map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#about {
+    margin: -55% 7% 0 0;
+}
+
+#about p {
+    line-height: 200%;
+}
+
+/* Style the slideshow image text overlay on the Homepage */
+.centeredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: 0 0 35px rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+/* Style the timetable on the homepage */
+table {
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border: 3px solid #B8A282;
+    text-align: center;
+    width: 100%;
+}
+
+td,th {
+    border: 1px solid #C9BBA3;
+    padding: 1%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style 2020 Term Dates */
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 5%;
+}
+
+.column p {
+    line-height: 150%;
+}
+
+.column a {
+    color: #62A5A7;
+}
+
+/* Style the slideshow */
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container, video {
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+#slide img, .mySlides1, .mySlides2 {
+    width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}  
+
+/* Caption text */
+.captionText {
+    color: #ffffff;
+    font-size: 150%;
+    padding: 1%;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/5 etc) */
+.numberText {
+    color: #ffffff;
+    font-size: 150%;
+    padding: 3%;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dotLine {
+    text-align:center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dotLine .active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+/* Six columns side by side */
+.column3 {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images on School Tips pages */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 20px;
+    font-size: 60px;
+}
+
+.carousel {
+    padding: 3% 7% 0 7%;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+    padding-top: 3%;
+}
+
+.content h2 {
+    font-weight: normal;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  background-color: saddlebrown;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline img {
+    width: 100%;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid bisque;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent bisque;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid bisque;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent bisque transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: bisque;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Style the footer */
+footer {
+	bottom: 0;
+    overflow: hidden;
+    background-color: #162A30;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	width: 100%;
+	text-align: left;
+	padding: 2% 1%;
+	margin-top: 2%;
+}
+
+.footer-column {
+    width: 33.3%;
+}
+
+footer h3 {
+	padding: 0;
+    margin-top: 4%;
+}
+
+.footer-bio {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 14px;
+	margin-top: -4%;
+}
+
+.footer-copyright {
+	color: #ffffff;
+	font-size: 14px;
+	margin-top: 2%;
+}
+
+.footer-links .footer-heading {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-links p, .footer-links a {
+    font: normal 15px 'Open Sans', sans-serif;
+    color: #ffffff;
+}
+ 
+.footer-links {
+	margin: 0 5%;
+	padding: 0;
+    list-style: none;
+}
+ 
+.footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #92999f;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active, .footer-links a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+ 
+
+
+
+
+/* Changes to be made when the screen size is less than 600px */
+@media screen and (max-width: 700px) {
+    p, table {
+        font-size: 16px;
+    }
+    
+    .topnav-right {
+        display: none;
+    }
+
+    .icon {
+        float: right;
+        display: block;
+    }
+    
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 30px}
+    .overlay .closebtn {
+         font-size: 50px;
+         top: 15px;
+         right: 35px;
+    }
+    
+    .column {
+        width: 100%;
+    }
+    
+    article {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        -ms-column-count: 1;
+        column-count: 1;
+        padding-right: 5%;
+    }
+    
+    #about {
+        margin-top: 10%;
+    }
+    
+    .prev, .next,.text {font-size: 11px}
+    
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+  
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid bisque;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent bisque transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+        left: 15px;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+    
+    .footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+}
+
+/* Changes to be made when the screen size is greater than 600px */
+@media screen and (min-width: 700px) {
+    .icon, a.closebtn {
+        display: none;
+    }
+}
+
+
+
+
+
