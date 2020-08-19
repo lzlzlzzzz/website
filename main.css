@@ -196,22 +196,22 @@ p, table, .numberText, .captionText {
 }
 
 #homeHeader {
-    background-image: url(images/homeHeader.jpg);
+    background-image: url(homeHeader.jpg);
     background-position: center;
 }
 
 #classroomsHeader {
-    background-image: url(images/classroomsHeader_2.jpg);
+    background-image: url(classroomsHeader_2.jpg);
     background-position: center;
 }
 
 #technologyHeader {
-    background-image: url(images/technologyIssuesHeader_2.jpg);
+    background-image: url(technologyIssuesHeader_2.jpg);
     background-position: top;
 }
 
 #schoolTipsHeader {
-    background-image: url(images/schoolTipsHeader_2.jpg);
+    background-image: url(schoolTipsHeader_2.jpg);
     background-position: center;
 }
 
