@@ -394,8 +394,6 @@ td,th {
     font-weight: bold;
     padding: 1% 3%;
     position: absolute;
-    top: 0;
-    text-align: center;
     text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
@@ -613,7 +611,7 @@ footer h3 {
 
 .footer-bio {
 	line-height: 20px;
-	color: #92999f;
+	color: #92999F;
 	margin-top: -4%;
 }
 
@@ -657,8 +655,6 @@ footer h3 {
     text-decoration: underline;
     font-weight: bold;
 }
-
- 
 
 
 
@@ -777,6 +773,10 @@ footer h3 {
         left: 0%;
     }
     
+    footer .logo {
+        font-size: 25px;
+    }
+    
     #footer-pageLinks, #footer-schoolContact {
         padding: 0;
         margin: 0;
@@ -784,6 +784,14 @@ footer h3 {
     
     #footer-schoolContact {
         padding-bottom: 10%;
+    }
+    
+    .footer-links p, .footer-links a, .footer-bio, .footer-copyright {
+        font-size: 12px;
+    }
+    
+    .footer-links .footer-heading {
+        font-size: 16px;
     }
 }
 
