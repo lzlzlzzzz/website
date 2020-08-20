@@ -7,21 +7,21 @@ body {
     margin: 0;
 }
 
-h1 {
-    color: white;
+section h1 {
+    color: #ffffff;
     font: bold 45px 'Roboto Slab', serif;
     text-shadow: 0 0 20px rgb(0, 0, 0);
     letter-spacing: 3px;
 }
 
 h2 {
-    color: black;
+    color: #000000;
     font: bold 25px 'Ubuntu', sans-serif;
 }
 
 section h3 {
     font: bold 20px 'Ubuntu', sans-serif;
-    color: white;
+    color: #ffffff;
     text-shadow: 0 0 30px rgb(0, 0, 0);
     letter-spacing: 2px;
 }
@@ -39,12 +39,8 @@ p, table, .numberText, .captionText {
 
 /* Style the logo */
 .logo {
-    color: white;
+    color: #ffffff;
 	font: normal 36px 'Secular One', sans-serif;
-}
-
-.logo span {
-    color:  white;
 }
 
 /* Style the top nagivation bar */
@@ -52,14 +48,14 @@ p, table, .numberText, .captionText {
     overflow: hidden;
     background-color: #162A30;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    padding: 20px 15px;
+    padding: 1.5% 1.1%;
     z-index: 1;
 }
 
 .topnav a {
     float: left;
     display: block;
-    padding: 13px 12px;
+    padding: 1%;
     text-decoration: none;
     line-height: 25px;
 }
@@ -82,10 +78,11 @@ p, table, .numberText, .captionText {
 }
 
 /* Change the background color on mouse-over */
-.topnav a:hover, .dropDown:hover .dropBtn, .dropBtn:focus {
-    background-color: #ddd;
-    color: black;
+.topnav a:hover, .dropDown:hover .dropBtn, .dropBtn:focus, .logo a:hover {
+    background-color: #DDDDDD;
+    color: #000000;
     border-radius: 4px;
+    transition-duration: 0.4s;
 }
 
 /* Style the dropdown menus in the topnav */
@@ -110,8 +107,8 @@ p, table, .numberText, .captionText {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
+  background-color: #F0F0F0;
+  min-width: 21%;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -119,7 +116,7 @@ p, table, .numberText, .captionText {
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 5%; 
   text-decoration: none;
   display: block;
   text-align: left;
@@ -134,55 +131,64 @@ p, table, .numberText, .captionText {
     height: 0%;
     width: 100%;
     position: fixed;
-    z-index: 99;
+    z-index: 200;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: #162A30;
     overflow-y: hidden;
     transition: 0.5s;
 }
 
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+.overlay .closebtn {
+    position: absolute;
+    font-size: 60px;
+    top: 10px;
+    right: 20px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.overlay a, .dropdown-btn {
-    padding: 8px;
+.overlay-content {
+    position: relative;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.overlay-content a, .overlay-content .dropdown-btn {
+    padding: 2%;
     text-decoration: none;
-    font-size: 40px;
-    color: #818181;
+    font: normal 25px 'Open Sans', sans-serif;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus, .dropdown-btn:hover {
-    color: #f1f1f1;
+.overlay-content a:hover, .overlay-content .dropdown-btn:hover {
+    background-color: #DDDDDD;
+    color: #000000;
 }
 
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 160px;
-}
-
-.dropdown-btn {
-  font-size: 28px;
-  border: none;
-  background: none;
-  width: 100%;
-  cursor: pointer;
+.overlay-content .dropdown-btn {
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
 }
 
 .dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
+    display: none;
+    background-color: #DDDDDD;
+}
+
+.dropdown-container a {
+    color: #000000;
+    font-size: 20px;
+}
+
+.dropdown-container a:hover {
+    background-color: #2E5763;
+    color: #ffffff;
 }
 
 /* Style the headers on each page */
@@ -193,41 +199,46 @@ p, table, .numberText, .captionText {
     padding: 10% 3%;
     width: 100%;
     text-align: center;
+    background-position: center;
+}
+
+.headerBox2 {
+    padding: 11.5% 3%;
+}
+
+.intro {
+    padding-top: 2%;
 }
 
 #homeHeader {
     background-image: url(homeHeader.jpg);
-    background-position: center;
 }
 
 #classroomsHeader {
     background-image: url(classroomsHeader_2.jpg);
-    background-position: center;
 }
 
 #technologyHeader {
     background-image: url(technologyIssuesHeader_2.jpg);
-    background-position: top;
 }
 
 #schoolTipsHeader {
     background-image: url(schoolTipsHeader_2.jpg);
-    background-position: center;
 }
 
 /* Style the back-to-top button */
 #topBtn {
     display: none; 
     position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
+    bottom: 3%; 
+    right: 2%; 
     z-index: 99;
     border: none; 
     outline: none;
-    background-color: #A0C7F9;
+    background-color: #A0E0F9;
     opacity: 0.5;
     cursor: pointer; 
-    padding: 25px 25px 18px 25px; 
+    padding: 1.5%; 
     border-radius: 100%; 
 }
 
@@ -261,18 +272,18 @@ article {
     padding: 3% 0 3% 5%;
 }
 
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 .map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 #about {
@@ -590,21 +601,28 @@ footer {
     width: 33.3%;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 footer h3 {
 	padding: 0;
     margin-top: 4%;
 }
 
+.footer-bio, .footer-copyright {
+    font-size: 14px;
+}
+
 .footer-bio {
 	line-height: 20px;
 	color: #92999f;
-	font-size: 14px;
 	margin-top: -4%;
 }
 
 .footer-copyright {
 	color: #ffffff;
-	font-size: 14px;
 	margin-top: 2%;
 }
 
@@ -613,21 +631,25 @@ footer h3 {
     font-size: 18px;
 }
 
-.footer-links p, .footer-links a {
-    font: normal 15px 'Open Sans', sans-serif;
-    color: #ffffff;
-}
- 
 .footer-links {
 	margin: 0 5%;
 	padding: 0;
     list-style: none;
+}
+
+.footer-links p, .footer-links a {
+    font: normal 15px 'Open Sans', sans-serif;
+    color: #ffffff;
 }
  
 .footer-links a {
 	display: inline-block;
 	line-height: 1.8;
 	text-decoration: none;
+}
+
+#footer-pageLinks {
+    padding-left: 10%;
 }
 
 .footer-links a:hover {
@@ -651,25 +673,46 @@ footer h3 {
         font-size: 16px;
     }
     
+    .column {
+        width: 100%;
+    }
+    
+    .topnav {
+        padding: 1.5% 1%;
+    }
+    
+    .logo {
+        font-size: 30px;
+    }
+    
+    .topnav a {
+        padding: 2%;
+    }
+    
     .topnav-right {
         display: none;
     }
 
     .icon {
         float: right;
+        padding: 0.5% 1%;
         display: block;
     }
     
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 30px}
-    .overlay .closebtn {
-         font-size: 50px;
-         top: 15px;
-         right: 35px;
+    .headerBox {
+        padding: 6%;
     }
     
-    .column {
-        width: 100%;
+    .headerBox2 {
+        padding: 11%;
+    }
+    
+    section h1 {
+        font-size: 35px;
+    }
+    
+    section h3 {
+        font-size: 15px;
     }
     
     article {
@@ -682,6 +725,14 @@ footer h3 {
     
     #about {
         margin-top: 10%;
+    }
+    
+    #topBtn {
+        padding: 4%;
+    }
+    
+    .upArrow {
+        padding: 7px;
     }
     
     .prev, .next,.text {font-size: 11px}
@@ -716,10 +767,14 @@ footer h3 {
         left: 0%;
     }
     
-    .footer-distributed{
-		font: bold 14px sans-serif;
-	
-	}
+    #footer-pageLinks, #footer-schoolContact {
+        padding: 0;
+        margin: 0;
+    }
+    
+    #footer-schoolContact {
+        padding-bottom: 10%;
+    }
 }
 
 /* Changes to be made when the screen size is greater than 600px */
