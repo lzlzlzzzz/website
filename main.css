@@ -35,6 +35,10 @@ p, table, .numberText, .captionText {
     padding: 0.5% 5% 3% 5%;
 }
 
+.align2 {
+    padding: 3% 5% 1.5% 5%;
+}
+
 * {box-sizing: border-box;}
 
 /* Style the logo */
@@ -226,6 +230,10 @@ p, table, .numberText, .captionText {
     background-image: url(schoolTipsHeader_2.jpg);
 }
 
+#studyTipsHeader {
+    background-image: url(studyTipsHeader.jpg);
+}
+
 /* Style the back-to-top button */
 #topBtn {
     display: none; 
@@ -373,6 +381,10 @@ td,th {
     border-radius: 3px 0 0 3px;
 }
 
+#tipsNextBtn {
+    right: 5%;
+}
+
 /* On hover, add a grey background color */
 .prev:hover, .next:hover {
     background-color: #DDDDDD;
@@ -451,7 +463,7 @@ td,th {
 /* Six columns side by side */
 .column3 {
     float: left;
-    width: 16.66%;
+    width: 20%;
 }
 
 /* Add a transparency effect for thumnbail images on School Tips pages */
@@ -501,7 +513,7 @@ td,th {
   content: '';
   position: absolute;
   width: 10px;
-  background-color: saddlebrown;
+  background-color: #8B4513;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -553,9 +565,9 @@ td,th {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid bisque;
+  border: medium solid #FFE4C4;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent bisque;
+  border-color: transparent transparent transparent #FFE4C4;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -567,9 +579,9 @@ td,th {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid bisque;
+  border: medium solid #FFE4C4;
   border-width: 10px 10px 10px 0;
-  border-color: transparent bisque transparent transparent;
+  border-color: transparent #FFE4C4 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -580,7 +592,7 @@ td,th {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: bisque;
+  background-color: #FFE4C4;
   position: relative;
   border-radius: 6px;
 }
@@ -707,18 +719,20 @@ footer h3 {
     
     section h1 {
         font-size: 33px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     
     h2 {
-        font-size: 23px;
+        font-size: 20px;
     }
     
     .content h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     section h3 {
         font-size: 15px;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
     
     article {
@@ -747,13 +761,17 @@ footer h3 {
     }
     
     .centeredText {
-        font-size: 20px;
+        font-size: 22px;
         top: 45%;
     }
     
     .prev, .next {
-        font-size: 20px;
-        margin-top: -4%;
+        font-size: 40px;
+        margin-top: -7%;
+    }
+    
+    #prevBtn, #nextBtn {
+        display: none;
     }
     
     .timeline {
@@ -798,13 +816,17 @@ footer h3 {
         font-size: 25px;
     }
     
+    #footer-webInfor {
+        margin: 1%;
+    }
+    
     #footer-pageLinks, #footer-schoolContact {
         padding: 0;
-        margin: 0;
+        margin: 1%;
     }
     
     #footer-schoolContact {
-        padding-bottom: 10%;
+        margin-bottom: 10%;
     }
     
     .footer-links p, .footer-links a, .footer-bio, .footer-copyright {
