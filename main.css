@@ -731,6 +731,10 @@ footer h3 {
         padding: 10%;
     }
     
+    .headerBox3 {
+        padding: 8%;
+    }
+    
     .banner1 {
         font-size: 28px;
     }
@@ -790,7 +794,7 @@ footer h3 {
     }
     
     .text2 {
-        font-size: 18px;
+        font-size: 15px;
     }
     
     .numberText {
