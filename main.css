@@ -693,7 +693,7 @@ footer h3 {
 
 /* Changes to be made when the screen size is less than 600px */
 @media screen and (max-width: 700px) {
-    p, table, .numberText {
+    p, table {
         font-size: 14px;
     }
     
@@ -789,9 +789,13 @@ footer h3 {
         top: 45%;
     }
     
+    .numberText {
+        font-size: 16px;
+    }
+    
     .prev, .next {
-        font-size: 35px;
-        margin-top: -8%;
+        font-size: 30px;
+        margin-top: -7%;
         padding: 3%;
     }
     
