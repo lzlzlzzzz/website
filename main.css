@@ -52,7 +52,7 @@ p, table, .numberText, .captionText {
     overflow: hidden;
     background-color: #162A30;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    padding: 1.5% 1.1%;
+    padding: 1.4% 1%;
     z-index: 1;
 }
 
@@ -408,11 +408,11 @@ td,th {
 }
 
 .prev:hover {
-    border-radius: 0 40px 40px 0;
+    border-radius: 0 35px 35px 0;
 }
 
 .next:hover {
-    border-radius: 40px 0 0 40px;
+    border-radius: 35px 0 0 35px;
 }
 
 /* Number text (1/5 etc) */
