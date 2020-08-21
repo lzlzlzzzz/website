@@ -727,24 +727,16 @@ footer h3 {
         padding: 5%;
     }
     
-    .headerBox2, .headerBox4 {
-        padding: 9%;
-    }
-    
-    .headerBox3 {
-        padding: 13%;
-    }
-    
-    .headerBox5 {
+    .headerBox2 {
         padding: 10%;
-    }
-    
-    .headerBox6 {
-        padding: 3%;
     }
     
     .banner1 {
         font-size: 28px;
+    }
+    
+    .banner2 {
+        font-size: 26px;
     }
     
     section h1 {
@@ -791,6 +783,10 @@ footer h3 {
     .centeredText {
         font-size: 22px;
         top: 45%;
+    }
+    
+    .text1 {
+        font-size: 20px;
     }
     
     .numberText {
