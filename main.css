@@ -724,7 +724,7 @@ footer h3 {
     }
     
     .headerBox {
-        padding: 5%;
+        padding: 6%;
     }
     
     .headerBox2 {
@@ -735,16 +735,12 @@ footer h3 {
         padding: 8%;
     }
     
-    .banner1 {
-        font-size: 28px;
-    }
-    
     .banner2 {
         font-size: 26px;
     }
     
     section h1 {
-        font-size: 33px;
+        font-size: 28px;
     }
     
     h2 {
