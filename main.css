@@ -8,7 +8,7 @@ body {
 }
 
 section h1 {
-    color: #ffffff;
+    color: #FFFFFF;
     font: bold 45px 'Roboto Slab', serif;
     text-shadow: 0 0 20px rgb(0, 0, 0);
     letter-spacing: 3px;
@@ -21,7 +21,7 @@ h2 {
 
 section h3 {
     font: bold 20px 'Ubuntu', sans-serif;
-    color: #ffffff;
+    color: #FFFFFF;
     text-shadow: 0 0 30px rgb(0, 0, 0);
     letter-spacing: 2px;
 }
@@ -39,11 +39,19 @@ p, table, .numberText, .captionText {
     padding: 3% 5% 1.5% 5%;
 }
 
+.align3 {
+    padding: 0 3%;
+}
+
+.align4 {
+    padding: 3% 3% 0 3%;
+}
+
 * {box-sizing: border-box;}
 
 /* Style the logo */
 .logo {
-    color: #ffffff;
+    color: #FFFFFF;
 	font: normal 36px 'Secular One', sans-serif;
 }
 
@@ -76,7 +84,7 @@ p, table, .numberText, .captionText {
 }
 
 .topnav-right a, .dropDown .dropBtn {
-    color: white;
+    color: #FFFFFF;
     font: normal 18px 'Open Sans', sans-serif;
     padding: 13px 12px;
 }
@@ -89,13 +97,7 @@ p, table, .numberText, .captionText {
     transition-duration: 0.4s;
 }
 
-/* Style the dropdown menus in the topnav */
-.icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: #ffffff;
-}
-
+/* Style the dropdown menu in the topnav */
 .dropDown {
     float: left;
     overflow: hidden;
@@ -119,7 +121,7 @@ p, table, .numberText, .captionText {
 
 .dropdown-content a {
   float: none;
-  color: black;
+  color: #000000;
   padding: 5%; 
   text-decoration: none;
   display: block;
@@ -131,6 +133,12 @@ p, table, .numberText, .captionText {
 }
 
 /* Style the dropdown menu on mobile phones */
+.icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
 .overlay {
     height: 0%;
     width: 100%;
@@ -148,7 +156,7 @@ p, table, .numberText, .captionText {
     font-size: 60px;
     top: 10px;
     right: 20px;
-    color: #ffffff;
+    color: #FFFFFF;
     text-decoration: none;
 }
 
@@ -163,7 +171,7 @@ p, table, .numberText, .captionText {
     padding: 2%;
     text-decoration: none;
     font: normal 25px 'Open Sans', sans-serif;
-    color: #ffffff;
+    color: #FFFFFF;
     display: block;
     transition: 0.3s;
 }
@@ -192,7 +200,7 @@ p, table, .numberText, .captionText {
 
 .dropdown-container a:hover {
     background-color: #2E5763;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 /* Style the headers on each page */
@@ -246,34 +254,85 @@ p, table, .numberText, .captionText {
     background-image: url(thingsToDoHeader.jpg);
 }
 
-/* Style the back-to-top button */
+/* Style the back-to-top button and prev & next page buttons on Technology Issue pages and School Tips pages */
+#topBtn, .prevPageBtn, .nextPageBtn {
+    border: none; 
+    outline: none;
+    cursor: pointer; 
+    border-radius: 100%;
+}
+
 #topBtn {
     display: none; 
     position: fixed; 
     bottom: 3%; 
     right: 2%; 
     z-index: 99;
-    border: none; 
-    outline: none;
     background-color: #A0E0F9;
     opacity: 0.5;
-    cursor: pointer; 
-    padding: 1.5%; 
-    border-radius: 100%; 
+    padding: 1.5%;
 }
 
-.upArrow {
+.prevPageBtn, .nextPageBtn {
+    margin: 0 2% 2% 0;
+    background-color: #55CCFB;
+    padding: 2%;
+}
+
+.prevPageBtn {
+    float: left;
+}
+
+.nextPageBtn {
+    float: right;
+}
+
+.upArrow, .prevPageArrow, .nextPageArrow {
     border: solid #000000;
     border-width: 0 5px 5px 0;
     display: block;
     padding: 10px;
-    opacity: 0.5;
+}
+
+.upArrow {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
 
 #topBtn:hover {
     opacity: 1;
+}
+
+.prevPageArrow {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.nextPageArrow {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.prevPage a, .nextPage a {
+    text-decoration: none;
+}
+
+.prevPage h2, .nextPage h2 {
+    margin: 2%;
+}
+
+.prevPage h2:hover, .nextPage h2:hover {
+    color: #92999F;
+    text-decoration: underline;
+}
+
+.nextPage h2 {
+    float: right;
+}
+
+.column2 {
+    width: 50%;
+    float: left;
 }
 
 /* Add an active class to highlight the current page */
@@ -323,13 +382,13 @@ article {
     font-weight: bold;
     font-size: 35px;
     text-shadow: 0 0 35px rgb(0, 0, 0);
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 /* Style the timetable on the homepage */
 table {
     border-collapse: collapse;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border: 3px solid #B8A282;
     text-align: center;
     width: 100%;
@@ -379,7 +438,7 @@ td,th {
     width: auto;
     padding: 1.5%;
     margin-top: -3%;
-    color: #ffffff;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 40px;
     transition: 0.6s ease;
@@ -417,7 +476,7 @@ td,th {
 
 /* Number text (1/5 etc) */
 .numberText {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 30px;
     font-weight: bold;
     padding: 0.2% 2.3%;
@@ -435,7 +494,7 @@ td,th {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #BBBBBB;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -476,7 +535,7 @@ td,th {
 }
 
 .tips {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 22px;
 }
 
@@ -484,7 +543,7 @@ td,th {
     padding: 2%;
 }
 
-/* Six columns side by side */
+/* Five columns side by side */
 .column3 {
     float: left;
     width: 20%;
@@ -553,7 +612,7 @@ td,th {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: white;
+  background-color: #FFFFFF;
   border: 4px solid #FF9F55;
   top: 20px;
   border-radius: 50%;
@@ -629,7 +688,7 @@ footer {
 
 .logo a {
     text-decoration: none;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 footer h3 {
@@ -648,7 +707,7 @@ footer h3 {
 }
 
 .footer-copyright {
-	color: #ffffff;
+	color: #FFFFFF;
 	margin-top: 2%;
 }
 
@@ -665,7 +724,7 @@ footer h3 {
 
 .footer-links p, .footer-links a {
     font: normal 15px 'Open Sans', sans-serif;
-    color: #ffffff;
+    color: #FFFFFF;
 }
  
 .footer-links a {
@@ -679,7 +738,7 @@ footer h3 {
 }
 
 .footer-links a:hover {
-    color: #92999f;
+    color: #92999F;
 }
 
 /* Add an active class to highlight the current page */
@@ -697,7 +756,7 @@ footer h3 {
         font-size: 14px;
     }
     
-    .column {
+    .column, .column2 {
         width: 100%;
     }
     
@@ -735,7 +794,7 @@ footer h3 {
         padding: 8%;
     }
     
-    .banner2 {
+    .banner1 {
         font-size: 26px;
     }
     
@@ -747,7 +806,7 @@ footer h3 {
         font-size: 20px;
     }
     
-    .content h2 {
+    .content h2, .align4 h2 {
         font-size: 18px;
     }
     
@@ -768,11 +827,19 @@ footer h3 {
     }
     
     #topBtn {
-        padding: 4%;
+        padding: 3.5%;
+    }
+    
+    .prevPageBtn, .nextPageBtn {
+        padding: 2%;
     }
     
     .upArrow {
         padding: 7px;
+    }
+    
+    .prevPageArrow, .nextPageArrow {
+        padding: 6px;
     }
     
     .dot {
@@ -783,14 +850,6 @@ footer h3 {
     .centeredText {
         font-size: 22px;
         top: 45%;
-    }
-    
-    .text1 {
-        font-size: 20px;
-    }
-    
-    .text2 {
-        font-size: 19px;
     }
     
     .numberText {
@@ -847,6 +906,10 @@ footer h3 {
     
     .tips {
         font-size: 16px;
+    }
+    
+    .caption-container {
+        padding: 0.2% 3%;
     }
     
     footer .logo {
