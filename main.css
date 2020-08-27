@@ -817,8 +817,13 @@ footer h3 {
         font-size: 20px;
     }
     
-    .content h2, .align4 h2 {
+    .content h2 {
         font-size: 18px;
+    }
+    
+    .align4 h2 {
+        font-size: 16px;
+        margin: 1.5%;
     }
     
     section h3 {
@@ -842,7 +847,7 @@ footer h3 {
     }
     
     .prevPageBtn, .nextPageBtn {
-        padding: 2%;
+        padding: 1.5%;
     }
     
     .upArrow {
@@ -850,7 +855,7 @@ footer h3 {
     }
     
     .prevPageArrow, .nextPageArrow {
-        padding: 6px;
+        padding: 5px;
     }
     
     .dot {
@@ -920,7 +925,8 @@ footer h3 {
     }
     
     .copyrightText {
-        font-size: 12px;
+        font-size: 11px;
+        padding: 1%;
     }
     
     .caption-container {
