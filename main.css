@@ -821,7 +821,7 @@ footer h3 {
         font-size: 18px;
     }
     
-    .align4 h2 {
+    .align3 h2, .align4 h2 {
         font-size: 16px;
         margin: 1.5%;
     }
