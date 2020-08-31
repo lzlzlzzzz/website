@@ -313,6 +313,10 @@ p, table, .numberText, .captionText, .copyrightText {
     -webkit-transform: rotate(-45deg);
 }
 
+.prevPage {
+    padding-left: 1%;
+}
+
 .prevPage a, .nextPage a {
     text-decoration: none;
 }
@@ -585,7 +589,7 @@ td,th {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    margin: 2% 0;
+    margin: 2%;
 }
 
 .content h2 {
