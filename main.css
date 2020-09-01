@@ -1,5 +1,5 @@
 html {
-    background: white;
+    background: #FFFFFF;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -32,11 +32,11 @@ p, table, .numberText, .captionText, .copyrightText {
 }
 
 .align {
-    padding: 0.5% 5% 3% 5%;
+    padding: 0.5% 7% 3% 7%;
 }
 
-.align2 {
-    padding: 3% 5% 1.5% 5%;
+.align2, .carousel {
+    padding: 3% 7% 0 7%;
 }
 
 .align3 {
@@ -44,7 +44,7 @@ p, table, .numberText, .captionText, .copyrightText {
 }
 
 .align4 {
-    padding: 3% 3% 0 3%;
+    padding: 3% 6% 0 6%;
 }
 
 * {box-sizing: border-box;}
@@ -60,7 +60,7 @@ p, table, .numberText, .captionText, .copyrightText {
     overflow: hidden;
     background-color: #162A30;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-    padding: 1.4% 1%;
+    padding: 1%;
     z-index: 1;
 }
 
@@ -238,6 +238,10 @@ p, table, .numberText, .captionText, .copyrightText {
     background-image: url(technologyIssuesHeader.jpg);
 }
 
+#printingHeader {
+    background-image: url(printingHeader.jpg);
+}
+
 #schoolTipsHeader {
     background-image: url(schoolTipsHeader.jpg);
 }
@@ -352,7 +356,7 @@ article {
     -ms-column-count: 2;
     column-count: 2;
     text-align: left;
-    padding: 3% 0 3% 5%;
+    padding: 3% 0 2% 7%;
 }
 
 .map-responsive {
@@ -361,6 +365,7 @@ article {
     position: relative;
     height: 0;
 }
+
 .map-responsive iframe{
     left: 0;
     top: 0;
@@ -370,11 +375,11 @@ article {
 }
 
 #about {
-   padding: 0 7% 11% 0;
+   padding: 0 13% 0 0;
 }
 
 #about p {
-    line-height: 200%;
+    line-height: 150%;
 }
 
 /* Style the slideshow image text overlay on the Homepage */
@@ -413,7 +418,7 @@ td,th {
 .column {
     float: left;
     width: 50%;
-    padding: 0 5%;
+    padding: 0 7%;
 }
 
 .column p {
@@ -483,12 +488,12 @@ td,th {
     color: #FFFFFF;
     font-weight: bold;
     position: absolute;
+    text-shadow: 0 0 3px rgb(0, 0, 0);
 }
 
 .numberText {
     font-size: 30px;
     padding: 0.2% 2.3%;
-    text-shadow: 0 0 3px rgb(0, 0, 0);
 }
 
 /* Indicate the source of the photo that was not shot by my own */
@@ -572,10 +577,6 @@ td,th {
 .active,
 .demo:hover {
     opacity: 1;
-}
-
-.carousel {
-    padding: 3% 7% 0 7%;
 }
 
 #prevBtn {
@@ -699,6 +700,7 @@ footer {
 
 .footer-column {
     width: 33.3%;
+    padding: 0 3%;
 }
 
 .logo a {
