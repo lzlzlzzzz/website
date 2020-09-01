@@ -466,7 +466,7 @@ td,th {
 }
 
 #tipsNextBtn {
-    right: 5%;
+    right: 7%;
 }
 
 /* On hover, add a grey background color */
@@ -500,7 +500,7 @@ td,th {
 .copyrightText {
     font-size: 22px;
     top: 4%;
-    right: 5%;
+    right: 6%;
     text-align: right;
 }
 
