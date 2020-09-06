@@ -8,7 +8,7 @@
             <a href="index.html">Home</a>
             <a href="classrooms.html">Classrooms</a>
             <div class="dropDown">
-                <button class="dropBtn" id="btn1" onclick="myFunction()">Technology Issues
+                <button class="dropBtn" id="topnavBtn" onclick="myFunction()">Technology Issues
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
@@ -39,24 +39,25 @@
 </header>
 
 
-<!-- jQuery for highlighting the current page in the topnav -->
-<script src="JavaScript/jquery-1.10.2.js" type="text/javascript"></script>
+<!-- jQuery v3.5.1 for highlighting the current page in the topnav -->
+<script src="JavaScript/jquery-3.5.1.js" type="text/javascript"></script>
 
 <script>
-    // When the user moves the mouse onto the dropdown button, change the button background colour and button text colour; when the user moves the mouse out of the button, change the colours back to their original values
-    document.getElementById("btn1").addEventListener("mouseover", mouseOver);
-    document.getElementById("btn1").addEventListener("mouseout", mouseOut);
+    // When the user moves the mouse onto the dropdown button in the top nav, change the button background colour and button text colour; when the user moves the mouse out of the button, change the colours back to their original values
+    document.getElementById("topnavBtn").addEventListener("mouseover", mouseOver);
+    document.getElementById("topnavBtn").addEventListener("mouseout", mouseOut);
     
     function mouseOver() {
-        document.getElementById("btn1").style.color = "#000000";
-        document.getElementById("btn1").style.backgroundColor = "#DDDDDD";
-    }
-    function mouseOut() {
-        document.getElementById("btn1").style.color = "#ffffff";
-        document.getElementById("btn1").style.backgroundColor = "#162A30";
+        document.getElementById("topnavBtn").style.color = "#000000";
+        document.getElementById("topnavBtn").style.backgroundColor = "#DDDDDD";
     }
     
-    // When the user clicks on the button, toggle between hiding and showing the dropdown content
+    function mouseOut() {
+        document.getElementById("topnavBtn").style.color = "#ffffff";
+        document.getElementById("topnavBtn").style.backgroundColor = "#162A30";
+    }
+    
+    // When the user clicks on the button in the top nav, toggle between hiding and showing the dropdown content
     function myFunction() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -70,8 +71,17 @@
             }
         }
     }
+    
+    // Open and close functions for the dropdown menu on mobile phones
+    function openNav() {
+        document.getElementById("myTopnav").style.height = "100%";
+    }
+    
+    function closeNav() {
+        document.getElementById("myTopnav").style.height = "0%";
+    }
         
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    // Toggle between hiding and showing the dropdown menu content when the user clicks on the button in the dropdown menu
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;
 
@@ -87,15 +97,7 @@
         });
      }
     
-    // Open and close functions for the dropdown menu in the topnav
-    function openNav() {
-        document.getElementById("myTopnav").style.height = "100%";
-    }
-    function closeNav() {
-        document.getElementById("myTopnav").style.height = "0%";
-    }
-    
-    // Outline the current page in the topnav
+    // Outline the current page in the top nav
     $(function() {
         var url = window.location.href;
         $(".topnav-right a").each(function() {

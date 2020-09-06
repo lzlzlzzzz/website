@@ -1,6 +1,5 @@
 html {
     background: #FFFFFF;
-    -webkit-font-smoothing: antialiased;
 }
 
 body { 
@@ -49,12 +48,6 @@ p, table, .numberText, .captionText, .copyrightText {
 
 * {box-sizing: border-box;}
 
-/* Style the logo */
-.logo {
-    color: #FFFFFF;
-	font: normal 36px 'Secular One', sans-serif;
-}
-
 /* Style the top nagivation bar */
 .topnav {
     overflow: hidden;
@@ -72,7 +65,12 @@ p, table, .numberText, .captionText, .copyrightText {
     line-height: 25px;
 }
 
-/* Style the logo inside the topnav */
+/* Style the logo */
+.logo {
+    color: #FFFFFF;
+	font: normal 36px 'Secular One', sans-serif;
+}
+
 .topnav h3 {
     padding: 0;
     margin: 0;
@@ -83,13 +81,14 @@ p, table, .numberText, .captionText, .copyrightText {
     float: right;
 }
 
+/* Styles the links in the top nav */
 .topnav-right a, .dropDown .dropBtn {
     color: #FFFFFF;
     font: normal 18px 'Open Sans', sans-serif;
     padding: 13px 12px;
 }
 
-/* Change the background color on mouse-over */
+/* Change the top nav links background colour on mouse-over */
 .topnav a:hover, .dropDown:hover .dropBtn, .dropBtn:focus, .logo a:hover {
     background-color: #DDDDDD;
     color: #000000;
@@ -203,6 +202,12 @@ p, table, .numberText, .captionText, .copyrightText {
     color: #FFFFFF;
 }
 
+/* Add an active class to highlight the current page */
+.topnav a.active, .footer-links a.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 /* Style the headers on each page */
 .headerBox {
     background: no-repeat;
@@ -242,6 +247,10 @@ p, table, .numberText, .captionText, .copyrightText {
     background-image: url(printingHeader.jpg);
 }
 
+#wifiPasswordHeader {
+    background-image: url(wifiPasswordHeader.jpg);
+}
+
 #schoolTipsHeader {
     background-image: url(schoolTipsHeader.jpg);
 }
@@ -256,6 +265,170 @@ p, table, .numberText, .captionText, .copyrightText {
 
 #thingsToDoHeader {
     background-image: url(thingsToDoHeader.jpg);
+}
+
+/* Style the Google map and the school introduction on the Homepage */
+article {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    column-count: 2;
+    text-align: left;
+    padding: 3% 0 2% 7%;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#about {
+   padding: 0 13% 0 0;
+}
+
+#about p {
+    line-height: 150%;
+}
+
+/* Style the slideshow on the Homepage */
+.myslides, .mySlides1, .mySlides2 {display: none}
+.slideshow-container img {vertical-align: middle; width: 100%;}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1.5%;
+    margin-top: -3%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+    background-color: #DDDDDD;
+    color: #000000;
+}
+
+.prev:hover {
+    border-radius: 0 35px 35px 0;
+}
+
+.next:hover {
+    border-radius: 35px 0 0 35px;
+}
+
+/* Style the slideshow image text overlay on the each page */
+.centeredText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 35px;
+    text-shadow: 0 0 35px rgb(0, 0, 0);
+    color: #FFFFFF;
+}
+
+/* The dots/bullets/indicators */
+.dotLine {
+    text-align:center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #BBBBBB;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dotLine .active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Style the timetable on the homepage */
+table {
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border: 3px solid #B8A282;
+    text-align: center;
+    width: 100%;
+}
+
+td,th {
+    border: 1px solid #C9BBA3;
+    padding: 1%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style 2020 Term Dates and Dean Contacts on the Homepage*/
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 7%;
+}
+
+.column p {
+    line-height: 150%;
+}
+
+.column a {
+    color: #62A5A7;
 }
 
 /* Style the back-to-top button and prev & next page buttons on Technology Issue pages and School Tips pages */
@@ -343,122 +516,22 @@ p, table, .numberText, .captionText, .copyrightText {
     float: left;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active, .footer-links a.active {
-    text-decoration: underline;
-    font-weight: bold;
+/* Style the slideshow image text overlay on the Classroom page */
+.column2 .centeredText {
+    top: 44%;
 }
 
-/* Style the Google map and the school introduction on the Homepage */
-article {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    -ms-column-count: 2;
-    column-count: 2;
-    text-align: left;
-    padding: 3% 0 2% 7%;
+/* Style the two column slideshows on the Classrooms page */
+.column4 {
+    padding: 2% 2% 2% 4%;
 }
 
-.map-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
+.column5 {
+    padding: 2% 4% 2% 2%;
 }
 
-.map-responsive iframe{
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-#about {
-   padding: 0 13% 0 0;
-}
-
-#about p {
-    line-height: 150%;
-}
-
-/* Style the slideshow image text overlay on the Homepage */
-.centeredText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
-    font-size: 35px;
-    text-shadow: 0 0 35px rgb(0, 0, 0);
-    color: #FFFFFF;
-}
-
-/* Style the timetable on the homepage */
-table {
-    border-collapse: collapse;
-    background-color: #FFFFFF;
-    border: 3px solid #B8A282;
-    text-align: center;
-    width: 100%;
-}
-
-td,th {
-    border: 1px solid #C9BBA3;
-    padding: 1%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Style 2020 Term Dates */
-.column {
-    float: left;
-    width: 50%;
-    padding: 0 7%;
-}
-
-.column p {
-    line-height: 150%;
-}
-
-.column a {
-    color: #62A5A7;
-}
-
-/* Style the slideshow */
-.myslides, .mySlides1, .mySlides2 {display: none}
-.slideshow-container img {vertical-align: middle; width: 100%;}
-
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 1.5%;
-    margin-top: -3%;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 40px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.column2 .prev, .column2 .next {
+    margin-top: -5.5%;
 }
 
 #tipsPrevBtn, #tipsNextBtn {
@@ -467,20 +540,6 @@ td,th {
 
 #tipsNextBtn {
     right: 7%;
-}
-
-/* On hover, add a grey background color */
-.prev:hover, .next:hover {
-    background-color: #DDDDDD;
-    color: #000000;
-}
-
-.prev:hover {
-    border-radius: 0 35px 35px 0;
-}
-
-.next:hover {
-    border-radius: 35px 0 0 35px;
 }
 
 /* Number text (1/5 etc) */
@@ -496,50 +555,17 @@ td,th {
     padding: 0.2% 2.3%;
 }
 
+.column2 .numberText {
+    padding: 3%;
+    margin: 0;
+}
+
 /* Indicate the source of the photo that was not shot by my own */
 .copyrightText {
     font-size: 22px;
     top: 4%;
     right: 6%;
     text-align: right;
-}
-
-/* The dots/bullets/indicators */
-.dotLine {
-    text-align:center;
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #BBBBBB;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dotLine .active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 3s;
-  animation-name: fade;
-  animation-duration: 3s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -767,50 +793,9 @@ footer h3 {
 
 
 
-/* Changes to be made when the screen size is less than 600px */
+/* Changes to be made when the screen size is less than 700px */
 @media screen and (max-width: 700px) {
-    p, table {
-        font-size: 14px;
-    }
-    
-    .column, .column2 {
-        width: 100%;
-    }
-    
-    .topnav {
-        padding: 2% 1%;
-    }
-    
-    .logo {
-        font-size: 28px;
-    }
-    
-    .topnav a {
-        padding: 2.5%;
-    }
-    
-    .topnav-right {
-        display: none;
-    }
-
-    .icon {
-        float: right;
-        padding: 0.5% 1%;
-        display: block;
-    }
-    
-    .headerBox {
-        padding: 6%;
-    }
-    
-    .headerBox2 {
-        padding: 10%;
-    }
-    
-    .headerBox3 {
-        padding: 8%;
-    }
-    
+    /* Make the fonts smaller */
     .banner1 {
         font-size: 26px;
     }
@@ -836,6 +821,59 @@ footer h3 {
         font-size: 15px;
     }
     
+    p, table {
+        font-size: 14px;
+    }
+    
+    /* Change multiple columns to one column */
+    .column, .column2 {
+        width: 100%;
+    }
+    
+    .column4, .column5 {
+        padding: 0.5% 7% 3% 7%;
+    }
+    
+    /* Style the top nav on mobile phones */
+    .topnav {
+        padding: 2% 1%;
+    }
+    
+    /* Make the logo smaller */
+    .logo {
+        font-size: 28px;
+    }
+    
+    .topnav a {
+        padding: 2.5%;
+    }
+    
+    /* Hide the top nav links */
+    .topnav-right {
+        display: none;
+    }
+    
+    /* Show the mobile dropdown menu icon */
+    .icon {
+        float: right;
+        padding: 0.5% 1%;
+        display: block;
+    }
+    
+    /* Resize the header background images */
+    .headerBox {
+        padding: 6%;
+    }
+    
+    .headerBox2 {
+        padding: 10%;
+    }
+    
+    .headerBox3 {
+        padding: 8%;
+    }
+    
+    /* Change the About Westlake section on the Homepage to one column */
     article {
         -webkit-column-count: 1;
         -moz-column-count: 1;
@@ -874,6 +912,15 @@ footer h3 {
         top: 45%;
     }
     
+    /* Resize the Technology Issuses main pages' slideshow fonts to make them fit to the slideshow size */
+    .text1 {
+        font-size: 20px;
+    }
+    
+    .text2 {
+        font-size: 18px;
+    }
+    
     .numberText {
         font-size: 16px;
     }
@@ -882,6 +929,10 @@ footer h3 {
         font-size: 30px;
         margin-top: -7%;
         padding: 3%;
+    }
+    
+    .column2 .prev, .column2 .next {
+        margin-top: -7.5%;
     }
     
     #prevBtn, #nextBtn {
@@ -932,7 +983,7 @@ footer h3 {
     
     .copyrightText {
         font-size: 11px;
-        padding: 1%;
+        padding: 1% 2%;
     }
     
     .caption-container {
@@ -965,8 +1016,9 @@ footer h3 {
     }
 }
 
-/* Changes to be made when the screen size is greater than 600px */
+/* Change to be made when the screen size is greater than 700px */
 @media screen and (min-width: 700px) {
+    /* Hide the mobile dropdown menu icon on desktops */
     .icon, a.closebtn {
         display: none;
     }

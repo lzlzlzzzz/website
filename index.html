@@ -42,19 +42,19 @@
                     <div class="mySlides fade">
                         <a href="classrooms.html">
                             <img src="classroomsSlide.jpg">
-                            <h2 class="centeredText">Classroom Top 5s</h2>
+                            <h2 class="centeredText">Top 5 Classrooms</h2>
                         </a>
                     </div>
                     <div class="mySlides fade">
                         <a href="printing_main.html">
                             <img src="technologyIssuesSlide.jpg">
-                            <h2 class="centeredText">Technology Issue Top 5s</h2>
+                            <h2 class="centeredText">Top 5 Technology Issues</h2>
                         </a>
                     </div>
                     <div class="mySlides fade">
                         <a href="schoolTips.html">
                             <img src="schoolTipsSlide.jpg">
-                            <h2 class="centeredText">School Tip Top 5s</h2>
+                            <h2 class="centeredText">Top 5 School Tips</h2>
                         </a>
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
@@ -161,8 +161,7 @@
       
     
     
-    
-        <!-- jQuery for shared header & footer, v3.3.1 -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     
         <script>
@@ -172,32 +171,17 @@
                 $("#footer").load("footer.html");
             });
             
-            // Slideshow effect
-            var slideIndex = 0;
-            showSlides();
-            var slides,dots;
+            // Slideshow effect (automatic slideshow which can also be controlled manually)
+            var slideIndex = 1;
+            var myTimer;
+            var slideshowContainer;
             
-            function showSlides() {
+            function showSlides(n) {
                 var i;
-                slides = document.getElementsByClassName("mySlides");
-                dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slideIndex++;
-                if (slideIndex> slides.length) {slideIndex = 1}
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 8000); // Change image every 8 seconds
-            }
-            
-            function plusSlides(position) {
-                slideIndex +=position;
-                if (slideIndex> slides.length) {slideIndex = 1}
-                else if(slideIndex<1){slideIndex = slides.length}
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
                 for (i = 0; i < slides.length; i++) {
                     slides[i].style.display = "none";
                 }
@@ -208,19 +192,45 @@
                 dots[slideIndex-1].className += " active";
             }
             
-            function currentSlide(index) {
-                if (index> slides.length) {index = 1}
-                else if(index<1){index = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+            // Automatic slideshow which can be paused/resumed when the user moves the mouse over/out of the slide
+            window.addEventListener("load",function() {
+                showSlides(slideIndex);
+                myTimer = setInterval(function(){plusSlides(1)}, 5000);
+                slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+                slideshowContainer.addEventListener('mouseenter', pause)
+                slideshowContainer.addEventListener('mouseleave', resume)
+            })
+            
+            pause = () => {
+                clearInterval(myTimer);
+            } 
+            
+            resume = () => {
+                clearInterval(myTimer);
+                myTimer = setInterval(function(){plusSlides(slideIndex)}, 5000);
+            }
+            
+            // Next and previous control
+            function plusSlides(n) {
+                clearInterval(myTimer);
+                if (n < 0) {
+                    showSlides(slideIndex -= 1);
+                } else {
+                    showSlides(slideIndex += 1);
                 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
+                if (n === -1) {
+                    myTimer = setInterval(function(){plusSlides(n + 2)}, 5000);
+                } else {
+                    myTimer = setInterval(function(){plusSlides(n + 1)}, 5000);
                 }
-                slides[index-1].style.display = "block";
-                dots[index-1].className += " active";
+            }
+            
+            //Controls the current slide and resets interval
+            function currentSlide(n) {
+                clearInterval(myTimer);
+                myTimer = setInterval(function(){plusSlides(n + 1)}, 5000);
+                showSlides(slideIndex = n);
             }
         </script>
-        
     </body>
 </html>
