@@ -274,12 +274,12 @@ article {
     -ms-column-count: 2;
     column-count: 2;
     text-align: left;
-    padding: 3% 0 2% 7%;
+    padding: 3% 0 0 7%;
 }
 
 .map-responsive {
     overflow: hidden;
-    padding-bottom: 50%;
+    padding-bottom: 56.25%;
     position: relative;
     height: 0;
 }
