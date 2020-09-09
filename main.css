@@ -297,7 +297,7 @@ article {
 }
 
 #about p {
-    line-height: 150%;
+    line-height: 120%;
 }
 
 /* Style the slideshow on the Homepage */
@@ -1021,5 +1021,11 @@ footer h3 {
     /* Hide the mobile dropdown menu icon on desktops */
     .icon, a.closebtn {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #about p {
+        line-height: 150%;
     }
 }
