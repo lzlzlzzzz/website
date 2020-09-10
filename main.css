@@ -297,7 +297,7 @@ article {
 }
 
 #about p {
-    line-height: 120%;
+    line-height: 115%;
 }
 
 /* Style the slideshow on the Homepage */
@@ -794,7 +794,7 @@ footer h3 {
 
 
 /* Changes to be made when the screen size is less than 700px */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
     /* Make the fonts smaller */
     .banner1 {
         font-size: 26px;
@@ -884,6 +884,10 @@ footer h3 {
     
     #about {
         padding: 0;
+    }
+    
+    #about p {
+        line-height: 150%;
     }
     
     #topBtn {
@@ -1017,14 +1021,14 @@ footer h3 {
 }
 
 /* Change to be made when the screen size is greater than 700px */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 750px) {
     /* Hide the mobile dropdown menu icon on desktops */
     .icon, a.closebtn {
         display: none;
     }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1500px) {
     #about p {
         line-height: 200%;
     }
