@@ -1034,6 +1034,12 @@ footer h3 {
     }
 }
 
+@media screen and (min-width: 1600px) and (max-width: 1700px) {
+    #about p {
+        line-height: 150%;
+    }
+}
+
 @media screen and (min-width: 1700px) {
     #about p {
         line-height: 200%;
