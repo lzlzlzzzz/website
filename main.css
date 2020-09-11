@@ -793,8 +793,8 @@ footer h3 {
 
 
 
-/* Changes to be made when the screen size is less than 700px */
-@media screen and (max-width: 750px) {
+/* Changes to be made when the screen size is less than 800px */
+@media screen and (max-width: 800px) {
     /* Make the fonts smaller */
     .banner1 {
         font-size: 26px;
@@ -1020,8 +1020,8 @@ footer h3 {
     }
 }
 
-/* Change to be made when the screen size is greater than 700px */
-@media screen and (min-width: 750px) {
+/* Change to be made when the screen size is greater than 800px */
+@media screen and (min-width: 800px) {
     /* Hide the mobile dropdown menu icon on desktops */
     .icon, a.closebtn {
         display: none;
