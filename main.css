@@ -793,8 +793,8 @@ footer h3 {
 
 
 
-/* Changes to be made when the screen size is less than 800px */
-@media screen and (max-width: 800px) {
+/* Changes to be made when the screen size is less than 801px */
+@media screen and (max-width: 801px) {
     /* Make the fonts smaller */
     .banner1 {
         font-size: 26px;
