@@ -10,13 +10,13 @@
         <meta name="author" content="Lillian Zhao">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Bootstrap stylesheet for the slideshow, v4.3.1 -->
+        <!-- Bootstrap stylesheet (v4.3.1) for the slideshow -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
         <!-- My own stylesheet -->
         <link rel="stylesheet" href="main.css">
         
-         <!-- Bootstrap jQuery (v3.3.1) and Javascript files (v1.14.7 & v4.3.1) for the slideshow -->
+        <!-- Bootstrap jQuery (v3.3.1) and Javascript files (v1.14.7 & v4.3.1) for the slideshow -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -24,13 +24,16 @@
     
     <body>
         
+        <!-- Shared header -->
         <div id="header"></div>
     
+        <!-- Printing Issues page header -->
         <section class="headerBox headerBox3" id="technologyHeader">
             <h1>Top 5 Printing Issues</h1>
             <h3 class="intro">The most common printing issues.</h3>
         </section>
         
+        <!-- Automatic slideshow which can also be controlled manually (code retrieved from Bootstrap, modified) -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -81,13 +84,12 @@
             </a>
         </div>
     
-        
-        
+        <!-- Shared footer -->
         <div id="footer"></div>
         
         
         
-        <!-- jQuery for shared header & footer -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         
         <script>

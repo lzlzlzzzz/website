@@ -267,7 +267,7 @@ p, table, .numberText, .captionText, .copyrightText {
     background-image: url(thingsToDoHeader.jpg);
 }
 
-/* Style the Google map and the school introduction on the Homepage */
+/* Style the Google map on the Homepage */
 article {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -292,6 +292,7 @@ article {
     position: absolute;
 }
 
+/* Style the school introduction on the Homepage */
 #about {
    padding: 0 13% 0 0;
 }
@@ -300,7 +301,7 @@ article {
     line-height: 120%;
 }
 
-/* Style the slideshow on the Homepage */
+/* Style the slideshows */
 .myslides, .mySlides1, .mySlides2 {display: none}
 .slideshow-container img {vertical-align: middle; width: 100%;}
 
@@ -396,7 +397,7 @@ article {
   to {opacity: 1}
 }
 
-/* Style the timetable on the homepage */
+/* Style the timetable on the Homepage */
 table {
     border-collapse: collapse;
     background-color: #FFFFFF;
@@ -431,7 +432,7 @@ td,th {
     color: #62A5A7;
 }
 
-/* Style the back-to-top button and prev & next page buttons on Technology Issue pages and School Tips pages */
+/* Style the back-to-top button and the page switching buttons on Technology Issues subpages and School Tips subpages */
 #topBtn, .prevPageBtn, .nextPageBtn {
     border: none; 
     outline: none;
@@ -439,6 +440,7 @@ td,th {
     border-radius: 100%;
 }
 
+/* Style the 'back-to-top' button */
 #topBtn {
     display: none; 
     position: fixed; 
@@ -450,6 +452,11 @@ td,th {
     padding: 1.5%;
 }
 
+#topBtn:hover {
+    opacity: 1;
+}
+
+/* Style the page switching buttons on Technology Issues subpages and School Tips subpages */
 .prevPageBtn, .nextPageBtn {
     margin: 0 2% 2% 0;
     background-color: #55CCFB;
@@ -464,6 +471,7 @@ td,th {
     float: right;
 }
 
+/* Style the arrows inside the buttons */
 .upArrow, .prevPageArrow, .nextPageArrow {
     border: solid #000000;
     border-width: 0 5px 5px 0;
@@ -476,10 +484,6 @@ td,th {
     -webkit-transform: rotate(-135deg);
 }
 
-#topBtn:hover {
-    opacity: 1;
-}
-
 .prevPageArrow {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
@@ -490,6 +494,7 @@ td,th {
     -webkit-transform: rotate(-45deg);
 }
 
+/* Style the links next to the page switching buttons */
 .prevPage {
     padding-left: 1%;
 }
@@ -511,17 +516,12 @@ td,th {
     float: right;
 }
 
+/* Style the two column slideshows on the Classrooms page */
 .column2 {
     width: 50%;
     float: left;
 }
 
-/* Style the slideshow image text overlay on the Classroom page */
-.column2 .centeredText {
-    top: 44%;
-}
-
-/* Style the two column slideshows on the Classrooms page */
 .column4 {
     padding: 2% 2% 2% 4%;
 }
@@ -534,77 +534,11 @@ td,th {
     margin-top: -5.5%;
 }
 
-#tipsPrevBtn, #tipsNextBtn {
-    top: 40%;
+.column2 .centeredText {
+    top: 44%;
 }
 
-#tipsNextBtn {
-    right: 7%;
-}
-
-/* Number text (1/5 etc) */
-.numberText, .copyrightText {
-    color: #FFFFFF;
-    font-weight: bold;
-    position: absolute;
-    text-shadow: 0 0 3px rgb(0, 0, 0);
-}
-
-.numberText {
-    font-size: 30px;
-    padding: 0.2% 2.3%;
-}
-
-.column2 .numberText {
-    padding: 3%;
-    margin: 0;
-}
-
-/* Indicate the source of the photo that was not shot by my own */
-.copyrightText {
-    font-size: 22px;
-    top: 4%;
-    right: 6%;
-    text-align: right;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-    cursor: pointer;
-}
-
-/* Container for image text */
-.caption-container {
-    text-align: center;
-    background-color: #162A30;
-    padding: 0.2% 1%;
-}
-
-.tips {
-    color: #FFFFFF;
-    font-size: 22px;
-}
-
-.tipsText {
-    padding: 2%;
-}
-
-/* Five columns side by side */
-.column3 {
-    float: left;
-    width: 20%;
-}
-
-/* Add a transparency effect for thumnbail images on School Tips pages */
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
+/* Position the slide switching buttons of the slideshows on the Technology Issues main pages and School Tips main page */
 #prevBtn {
     margin-left: 2%;
 }
@@ -613,17 +547,12 @@ td,th {
     margin-right: 2%;
 }
 
-/* The actual timeline (the vertical ruler) */
+/* Style the timeline (the vertical ruler) on the Technology Issues subpages */
 .timeline {
     position: relative;
     margin: 2%;
 }
 
-.content h2 {
-    font-weight: normal;
-}
-
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -635,11 +564,12 @@ td,th {
   margin-left: -3px;
 }
 
+/* Style images in timeline containers */
 .timeline img {
     width: 100%;
 }
 
-/* Container around content */
+/* Container around the timeline content */
 .container {
   padding: 10px 40px;
   position: relative;
@@ -671,30 +601,27 @@ td,th {
   left: 50%;
 }
 
+/* Common proporties of the container arrows */
+.left::before, .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    border: medium solid #FFE4C4;
+}
+
 /* Add arrows to the left container (pointing right) */
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
   right: 30px;
-  border: medium solid #FFE4C4;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #FFE4C4;
 }
 
 /* Add arrows to the right container (pointing left) */
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
   left: 30px;
-  border: medium solid #FFE4C4;
   border-width: 10px 10px 10px 0;
   border-color: transparent #FFE4C4 transparent transparent;
 }
@@ -704,12 +631,89 @@ td,th {
   left: -16px;
 }
 
-/* The actual content */
+/* The content in the timeline container */
 .content {
-  padding: 20px 30px;
+  padding: 2% 7% 6% 7%;
   background-color: #FFE4C4;
   position: relative;
   border-radius: 6px;
+}
+
+.content h2 {
+    font-weight: normal;
+}
+
+/* Style the number text (1/5 etc) on the slideshows and the copyright text on the Study Tips page */
+.numberText, .copyrightText {
+    color: #FFFFFF;
+    font-weight: bold;
+    position: absolute;
+    text-shadow: 0 0 3px rgb(0, 0, 0);
+}
+
+.numberText {
+    font-size: 30px;
+    padding: 0.2% 2.3%;
+}
+
+/* Style the number next on the two column slideshows on the Classrooms page */
+.column2 .numberText {
+    padding: 3%;
+    margin: 0;
+}
+
+/* Indicate the source of the photo that was not shot by my own */
+.copyrightText {
+    font-size: 22px;
+    top: 4%;
+    right: 6%;
+    text-align: right;
+}
+
+/* Container for tip text */
+.caption-container {
+    text-align: center;
+    background-color: #162A30;
+    padding: 0.2% 1%;
+}
+
+/* Style the tips text */
+.tips {
+    color: #FFFFFF;
+    font-size: 22px;
+}
+
+.tipsText {
+    padding: 2%;
+}
+
+/* Position the slide switching buttons on the School Tips subpages */
+#tipsPrevBtn, #tipsNextBtn {
+    top: 40%;
+}
+
+#tipsNextBtn {
+    right: 7%;
+}
+
+/* Create five columns side by side for the thumnbail images at the bottom of the slideshows */
+.column3 {
+    float: left;
+    width: 20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active, .demo:hover {
+    opacity: 1;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
 }
 
 /* Style the footer */
@@ -793,8 +797,8 @@ footer h3 {
 
 
 
-/* Changes to be made when the screen size is less than 801px */
-@media screen and (max-width: 801px) {
+/* Changes to be made when the screen size is less than 800px */
+@media screen and (max-width: 800px) {
     /* Make the fonts smaller */
     .banner1 {
         font-size: 26px;
@@ -821,7 +825,7 @@ footer h3 {
         font-size: 15px;
     }
     
-    p, table {
+    p, table, .footer-links .footer-heading {
         font-size: 14px;
     }
     
@@ -890,20 +894,13 @@ footer h3 {
         line-height: 150%;
     }
     
+    /* Resize the 'back-to-top' button and arrow */
     #topBtn {
         padding: 3.5%;
     }
     
-    .prevPageBtn, .nextPageBtn {
-        padding: 1.5%;
-    }
-    
     .upArrow {
         padding: 7px;
-    }
-    
-    .prevPageArrow, .nextPageArrow {
-        padding: 5px;
     }
     
     .dot {
@@ -943,6 +940,7 @@ footer h3 {
         display: none;
     }
     
+    /* Make the timeline padding smaller so the containers are more stratched out */
     .timeline {
         margin: 5% 0;
     }
@@ -962,9 +960,9 @@ footer h3 {
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
-        border: medium solid bisque;
+        border: medium solid #FFE4C4;
         border-width: 10px 10px 10px 0;
-        border-color: transparent bisque transparent transparent;
+        border-color: transparent #FFE4C4 transparent transparent;
     }
 
     /* Make sure all circles are at the same spot */
@@ -977,8 +975,13 @@ footer h3 {
         left: 0%;
     }
     
-    .content {
-        padding: 2% 7% 6% 7%;
+    /* Resize the page switching buttons and arrows */
+    .prevPageBtn, .nextPageBtn {
+        padding: 1.5%;
+    }
+    
+    .prevPageArrow, .nextPageArrow {
+        padding: 5px;
     }
     
     .tips {
@@ -994,6 +997,7 @@ footer h3 {
         padding: 0.2% 3%;
     }
     
+    /* Restyle the footer on mobile devices */
     footer .logo {
         font-size: 25px;
     }
@@ -1014,14 +1018,14 @@ footer h3 {
     .footer-links p, .footer-links a, .footer-bio, .footer-copyright {
         font-size: 12px;
     }
-    
-    .footer-links .footer-heading {
-        font-size: 14px;
-    }
 }
 
-/* Changes to be made when the screen size is less than 801px */
-@media screen and (max-width: 801px) and (orientation: landscape) {
+/* Changes to be made when the screen size is less than 800px */
+@media screen and (max-width: 800px) and (orientation: landscape) {
+    .overlay-content a, .overlay-content .dropdown-btn {
+        padding; 1%;
+    }
+    
     .footer-bio {
 	    margin: 0;
     }
