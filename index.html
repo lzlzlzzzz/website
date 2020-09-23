@@ -14,7 +14,7 @@
     
     <body>
         
-        <!-- Shared header -->
+        <!-- Shared top navigation bar -->
         <div id="header"></div>
     
         <!-- Homepage header -->
@@ -45,26 +45,28 @@
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <a href="classrooms.html">
-                            <img src="classroomsSlide.jpg">
+                            <img src="classroomsSlide.jpg" alt="classrooms slide">
                             <h2 class="centeredText">Top 5 Classrooms</h2>
                         </a>
                     </div>
                     <div class="mySlides fade">
                         <a href="printing_main.html">
-                            <img src="technologyIssuesSlide.jpg">
+                            <img src="technologyIssuesSlide.jpg" alt="technology issues slide">
                             <h2 class="centeredText">Top 5 Technology Issues</h2>
                         </a>
                     </div>
                     <div class="mySlides fade">
                         <a href="schoolTips.html">
-                            <img src="schoolTipsSlide.jpg">
+                            <img src="schoolTipsSlide.jpg" alt="school tips slide">
                             <h2 class="centeredText">Top 5 School Tips</h2>
                         </a>
                     </div>
+                    <!-- Prev & next buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a> 
                     <a class="next" onclick="plusSlides(1)">&#10095;</a> 
                 </div>
                 <br>
+                <!-- Dots undernearth the slideshow which enable slide switching when clicked on -->
                 <div class="dotLine">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
@@ -200,10 +202,10 @@
                 dots[slideIndex-1].className += " active";
             }
             
-            // Automatic slideshow which can be paused/resumed when the user moves the mouse over/out of the slide
+            // Pause/resume the automatic slideshow when the user moves the mouse over/out of the slide
             window.addEventListener("load",function() {
                 showSlides(slideIndex);
-                myTimer = setInterval(function(){plusSlides(1)}, 5000);
+                myTimer = setInterval(function(){plusSlides(1)}, 5000); // Change the slides every 5 seconds
                 slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
                 slideshowContainer.addEventListener('mouseenter', pause)
                 slideshowContainer.addEventListener('mouseleave', resume)

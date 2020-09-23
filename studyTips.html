@@ -13,8 +13,11 @@
     </head>
 
     <body>
+        
+        <!-- Shared top navigation bar -->
         <div id="header"></div>
         
+        <!-- Study Tips page header -->
         <section class="headerBox headerBox2" id="studyTipsHeader">
             <h1>Top 5 Study Tips</h1>
             <h3>Study wisely as a Westlake girl.</h3>
@@ -24,28 +27,28 @@
         <div class="slideshow-container align2">
             <div class="mySlides fade">
                 <div class="numberText tipsText">1 / 5</div>
-                <img src="schoolTipsSlide.jpg">
+                <img src="schoolTipsSlide.jpg" alt="school tips slide">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">2 / 5</div>
-                <img src="poster.jpg">
+                <img src="poster.jpg" alt="poster">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">3 / 5</div>
-                <img src="diary.jpg">
+                <img src="diary.jpg" alt="diary">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">4 / 5</div>
-                <img src="homework.jpg">
+                <img src="homework.jpg" alt="homework">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">5 / 5</div>
                 <div class="copyrightText tipsText">Photo copyright &copy; <br>2019 Sophia Zhu <br> Modified</div>
-                <img src="friends.jpg">
+                <img src="friends.jpg" alt="friends">
             </div>
             
             <!-- Next and previous buttons -->
@@ -81,6 +84,7 @@
             </div>
         </div>
         
+        <!-- Page switching buttons -->
         <div class="align4 row">
             <div class="prevPage column2">
                 <a href="thingsToDo.html" title="Go to Top 5 Things to do at Westlake">
@@ -96,12 +100,12 @@
             </div>
         </div>
  
-        
+        <!-- Shared footer -->
         <div id="footer"></div>
         
         
         
-        <!-- jQuery for shared header & footer -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         
         <script>
@@ -116,7 +120,6 @@
             showSlides(slideIndex);
 
             // Next/previous controls
-            
             function plusSlides(n) {
                 showSlides(slideIndex += n);
             }

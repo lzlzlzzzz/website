@@ -10,7 +10,7 @@
         <meta name="author" content="Lillian Zhao">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Bootstrap stylesheet for the slideshow, v4.3.1 -->
+        <!-- Bootstrap stylesheet (v4.3.1) for the slideshow -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
         <!-- My own stylesheet -->
@@ -24,14 +24,16 @@
     
     <body>
         
+        <!-- Shared top navigation bar -->
         <div id="header"></div>
     
+        <!-- School Tips page header -->
         <section class="headerBox headerBox2" id="schoolTipsHeader">
             <h1>Top 5 School Tips</h1>
             <h3 class="intro">Study and live wisely as a Westlake girl</h3>
         </section>
         
-        
+        <!-- Automatic slideshow which can also be controlled manually (code retrieved from Bootstrap, modified) -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -41,19 +43,19 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="studyTips.html">
-                        <img class="d-block w-100" src="studyTipsSlide.jpg">
+                        <img class="d-block w-100" src="studyTipsSlide.jpg" alt="studyTipsSlide">
                         <h2 class="centeredText">Top 5 Study Tips</h2>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="lifeTips.html">
-                        <img class="d-block w-100" src="lifeTipsSlide.jpg">
+                        <img class="d-block w-100" src="lifeTipsSlide.jpg" alt="lifeTipsSlide">
                         <h2 class="centeredText">Top 5 Life Tips</h2>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="thingsToDo.html">
-                        <img class="d-block w-100" src="thingsToDoSlide.jpg">
+                        <img class="d-block w-100" src="thingsToDoSlide.jpg" alt="thingsToDoSlide">
                         <h2 class="centeredText">Top 5 Things to do at Westlake</h2>
                     </a>
                 </div>
@@ -68,13 +70,12 @@
             </a>
         </div>
     
-        
-        
+        <!-- Shared footer -->
         <div id="footer"></div>
         
         
         
-        <!-- jQuery for shared header & footer -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         
         <script>

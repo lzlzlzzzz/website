@@ -13,8 +13,11 @@
     </head>
 
     <body>
+        
+        <!-- Shared top navigation bar -->
         <div id="header"></div>
         
+        <!-- Things-to-do page header -->
         <section class="headerBox" id="thingsToDoHeader">
             <h1>Top 5 Things to do at Westlake</h1>
             <h3>Things that you must have done at least once as a Westlake girl.</h3>
@@ -24,27 +27,27 @@
         <div class="slideshow-container align2">
             <div class="mySlides fade">
                 <div class="numberText tipsText">1 / 5</div>
-                <img src="sports.jpg">
+                <img src="sports.jpg" alt="sports">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">2 / 5</div>
-                <img src="music.jpg">
+                <img src="music.jpg" alt="music">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">3 / 5</div>
-                <img src="club.jpg">
+                <img src="club.jpg" alt="club">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">4 / 5</div>
-                <img src="activity.jpg">
+                <img src="activity.jpg" alt="activity">
             </div>
             
             <div class="mySlides fade">
                 <div class="numberText tipsText">5 / 5</div>
-                <img src="competition.jpg">
+                <img src="competition.jpg" alt="competition">
             </div>
             
             <!-- Next and previous buttons -->
@@ -80,6 +83,7 @@
             </div>
         </div>
         
+        <!-- Page switching buttons -->
         <div class="align4 row">
             <div class="prevPage column2">
                 <a href="lifeTips.html" title="Go to Top 5 Life Tips">
@@ -95,12 +99,12 @@
             </div>
         </div>
  
-        
+        <!-- Shared footer -->
         <div id="footer"></div>
         
         
         
-        <!-- jQuery for shared header & footer -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         
         <script>
@@ -115,7 +119,6 @@
             showSlides(slideIndex);
 
             // Next/previous controls
-            
             function plusSlides(n) {
                 showSlides(slideIndex += n);
             }
@@ -144,6 +147,5 @@
                 captionText.innerHTML = dots[slideIndex-1].alt;
             }
         </script>
-        
     </body>
 </html>

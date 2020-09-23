@@ -1,12 +1,15 @@
+<!-- Links for the Google fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab&family=Secular+One&family=Ubuntu&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!-- Shared top navigation bar -->
 <header>
     <div class="topnav">
         <h3><a href="index.html" class="logo">WGHS Top 5s</a></h3>
         <div class="topnav-right">
             <a href="index.html">Home</a>
             <a href="classrooms.html">Classrooms</a>
+            <!-- Dropdown button -->
             <div class="dropDown">
                 <button class="dropBtn" id="topnavBtn" onclick="myFunction()">Technology Issues
                     <i class="fa fa-caret-down"></i>
@@ -18,14 +21,17 @@
             </div>
             <a href="schoolTips.html">School Tips</a>
         </div>
+        <!-- Dropdown menu icon -->
         <span class="icon" onclick="openNav()">&#9776;</span>
     </div>
     
+    <!-- Full-screen dropdown menu on mobile devices -->
     <div id="myTopnav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <a href="index.html">Home</a>
             <a href="classrooms.html">Classrooms</a>
+            <!-- Dropdown menu -->
             <button class="dropdown-btn">Technology Issues
                 <i class="fa fa-caret-down"></i>
             </button>
@@ -43,15 +49,28 @@
 <script src="JavaScript/jquery-3.5.1.js" type="text/javascript"></script>
 
 <script>
-    // When the user moves the mouse onto the dropdown button in the top nav, change the button background colour and button text colour; when the user moves the mouse out of the button, change the colours back to their original values
+    // Outline the current page in the top nav
+    $(function() {
+        var url = window.location.href;
+        $(".topnav-right a").each(function() {
+             if (url == (this.href)) {
+                $(this).closest("a").addClass("active");
+                $(this).closest("a").parent().parent().addClass("active");
+            }
+        });
+    }); 
+    
+    // Assign the dropdown button events
     document.getElementById("topnavBtn").addEventListener("mouseover", mouseOver);
     document.getElementById("topnavBtn").addEventListener("mouseout", mouseOut);
     
+    // When the user moves the mouse onto the dropdown button in the top nav, change the button background colour and button text colour
     function mouseOver() {
         document.getElementById("topnavBtn").style.color = "#000000";
         document.getElementById("topnavBtn").style.backgroundColor = "#DDDDDD";
     }
     
+    // When the user moves the mouse out of the button, change the colours back to their original values
     function mouseOut() {
         document.getElementById("topnavBtn").style.color = "#ffffff";
         document.getElementById("topnavBtn").style.backgroundColor = "#162A30";
@@ -72,7 +91,7 @@
         }
     }
     
-    // Open and close functions for the dropdown menu on mobile phones
+    // Open and close functions for the dropdown menu on mobile devices
     function openNav() {
         document.getElementById("myTopnav").style.height = "100%";
     }
@@ -96,15 +115,4 @@
             }
         });
      }
-    
-    // Outline the current page in the top nav
-    $(function() {
-        var url = window.location.href;
-        $(".topnav-right a").each(function() {
-             if (url == (this.href)) {
-                $(this).closest("a").addClass("active");
-                $(this).closest("a").parent().parent().addClass("active");
-            }
-        });
-    }); 
 </script>

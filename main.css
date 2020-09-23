@@ -643,7 +643,7 @@ td,th {
     font-weight: normal;
 }
 
-/* Style the number text (1/5 etc) on the slideshows and the copyright text on the Study Tips page */
+/* Style the number text (1/5, 2/5 etc) on the slideshows and the copyright text on the Study Tips page */
 .numberText, .copyrightText {
     color: #FFFFFF;
     font-weight: bold;
@@ -812,7 +812,7 @@ footer h3 {
         font-size: 20px;
     }
     
-    .content h2 {
+    .content h2, .text2 {
         font-size: 18px;
     }
     
@@ -838,7 +838,7 @@ footer h3 {
         padding: 0.5% 7% 3% 7%;
     }
     
-    /* Style the top nav on mobile phones */
+    /* Make the top nav padding smaller on mobile phones */
     .topnav {
         padding: 2% 1%;
     }
@@ -886,6 +886,7 @@ footer h3 {
         padding-right: 5%;
     }
     
+    /* Style the school introduction on mobile devices */
     #about {
         padding: 0;
     }
@@ -903,11 +904,13 @@ footer h3 {
         padding: 7px;
     }
     
+    /* Make the dots under the slideshow on the Homepage smaller */
     .dot {
         width: 12px;
         height: 12px;
     }
     
+    /* Make the text on the slideshows smaller in size */
     .centeredText {
         font-size: 22px;
         top: 45%;
@@ -918,14 +921,12 @@ footer h3 {
         font-size: 20px;
     }
     
-    .text2 {
-        font-size: 18px;
-    }
-    
+    /* Make the slideshow number text (1/5, 2/5, etc) smaller */
     .numberText {
         font-size: 16px;
     }
     
+    /* Make the prev & next buttons on the slideshows smaller and closer to the edges */
     .prev, .next {
         font-size: 30px;
         margin-top: -7%;
@@ -936,6 +937,7 @@ footer h3 {
         margin-top: -7.5%;
     }
     
+    /* Hide the prev & next buttons on the Bootstrap slideshows on mobile devices (since the user can change the slides by sliding fingers on the screen) */
     #prevBtn, #nextBtn {
         display: none;
     }
@@ -984,17 +986,19 @@ footer h3 {
         padding: 5px;
     }
     
+    /* Make the tips text smaller */
     .tips {
         font-size: 16px;
     }
     
+    .caption-container {
+        padding: 0.2% 3%;
+    }
+    
+    /* Make the copyright text on the Study Tips page smaller and closer to the edges */
     .copyrightText {
         font-size: 11px;
         padding: 1% 2%;
-    }
-    
-    .caption-container {
-        padding: 0.2% 3%;
     }
     
     /* Restyle the footer on mobile devices */
@@ -1020,7 +1024,7 @@ footer h3 {
     }
 }
 
-/* Changes to be made when the screen size is less than 800px */
+/* Changes to be made when the screen size is less than 800px and the orientation is landscape */
 @media screen and (max-width: 800px) and (orientation: landscape) {
     .overlay-content a, .overlay-content .dropdown-btn {
         padding; 1%;
@@ -1037,24 +1041,27 @@ footer h3 {
 
 /* Change to be made when the screen size is greater than 800px */
 @media screen and (min-width: 800px) {
-    /* Hide the mobile dropdown menu icon on desktops */
+    /* Hide the mobile dropdown menu icon on desktops and laptops */
     .icon, a.closebtn {
         display: none;
     }
 }
 
+/* Change to be made when the screen size is greater than 1200px but less than 1300px */
 @media screen and (min-width: 1200px) and (max-width: 1300px) {
     #about p {
         line-height: 90%;
     }
 }
 
+/* Change to be made when the screen size is greater than 1600px but less than 1700px */
 @media screen and (min-width: 1600px) and (max-width: 1700px) {
     #about p {
         line-height: 150%;
     }
 }
 
+/* Change to be made when the screen size is greater than 1700px */
 @media screen and (min-width: 1700px) {
     #about p {
         line-height: 200%;

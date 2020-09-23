@@ -14,13 +14,16 @@
     
     <body>
         
+        <!-- Shared top navigation bar -->
         <div id="header"></div>
     
+        <!-- 'How to print an image' subpage header -->
         <section class="headerBox" id="printingHeader">
             <h1>How to print an image</h1>
             <h3>Do it in 3 steps.</h3>
         </section>
         
+        <!-- Solve the problem step by step -->
         <div class="timeline">
             <div class="container left">
                 <div class="content">
@@ -30,41 +33,42 @@
             <div class="container right">
                 <div class="content">
                     <h2>1. Email the image to yourself</h2>
-                    <img src="image_1.png">
+                    <img src="image_1.png" alt="image_1">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
                     <h2>OR: Upload the image to your Google Drive</h2>
-                    <img src="image_2.gif">
+                    <img src="image_2.gif" alt="image_2">
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
                     <h2>2. Select the image you wish to print, click on the printer icon on the top right corner and release the printing job</h2>
-                    <img src="image_3.jpg">
+                    <img src="image_3.jpg" alt="image_3">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
                     <h2>It works the same way in Google Drive (you will need to double click on the image to open it)</h2>
-                    <img src="image_4.jpg">
+                    <img src="image_4.jpg" alt="image_4">
                 </div>
             </div>
             <div class="container right">
                 <div class="content">
                     <h2>3. Don’t forget to logout once you have finished!</h2>
-                    <img src="idCard_7.jpeg">
+                    <img src="idCard_7.jpeg" alt="idCard_7">
                 </div>
             </div>
             <div class="container left">
                 <div class="content">
                     <h2>Done!</h2>
-                    <img src="image_5.jpg">
+                    <img src="image_5.jpg" alt="image_5">
                 </div>
             </div>
         </div>
         
+        <!-- Page switching buttons -->
         <div class="align3 row">
             <div class="prevPage column2">
                 <a href="printing_sub_1.html" title="Go to How to print without an ID card">
@@ -80,12 +84,12 @@
             </div>
         </div>
  
-        
+        <!-- Shared footer -->
         <div id="footer"></div>
         
         
         
-         <!-- jQuery for shared header & footer -->
+        <!-- jQuery v3.3.1 for shared header & footer -->
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     
         <script>
@@ -95,6 +99,5 @@
                 $("#footer").load("footer.html");
             });
         </script>
-        
     </body>
 </html>
