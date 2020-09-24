@@ -290,6 +290,7 @@ article {
     height: 100%;
     width: 100%;
     position: absolute;
+    border: 0;
 }
 
 /* Style the school introduction on the Homepage */
@@ -1027,7 +1028,7 @@ footer h3 {
 /* Changes to be made when the screen size is less than 800px and the orientation is landscape */
 @media screen and (max-width: 800px) and (orientation: landscape) {
     .overlay-content a, .overlay-content .dropdown-btn {
-        padding; 1%;
+        padding: 1%;
     }
     
     .footer-bio {
